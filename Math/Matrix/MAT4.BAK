@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<conio.h>
+int row,col,i,j;
+void create(int **a)
+{
+    for(i=0;i<row;i++)
+	    for(j=0;j<col;j++)
+	{
+	    printf("Enter value of matrix[%d][%d]:",i+1,j+1);
+	    scanf("%d",&a[i][j]);
+	    }
+}
+void Print(int **a)
+{
+    for(i=0;i<row;i++)
+    {
+	for(j=0;j<col;j++)
+	{
+	    printf("\t %d ",a[i][j]);
+     }
+	printf("\n");
+    }
+}
+
+void Addition(int **a,int **b)
+{
+
+	for(i=0;i<row;i++)
+	{
+	    for(j=0;i<col;j++)
+	    {
+		    printf(" %d ",(a[i][j]+b[i][j]));
+	    }
+	    printf("\n");
+	}
+
+}
+
+
+
+
+void main()
+{
+    int A[10][10],B[10][10];
+    printf("Enter a Row And Column Size For Null Matrix:");
+    scanf("%d %d",&row,&col);
+    create((int **)A);
+    Print((int **)A);
+
+     printf("\nEnter a Row And Column Size For A Matrix:");
+    scanf("%d %d",&row,&col);
+    create((int **)B);
+    Print((int **)B);
+
+    printf("\n Addtion Of Matrix");
+     Addition((int **)A,(int **)B);
+
+
+
+
+
+
+    getch();
+}

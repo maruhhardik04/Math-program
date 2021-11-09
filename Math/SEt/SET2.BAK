@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int *x,n,i,j,k;
+	printf("Enter a how many elements you required in set A:-");
+	scanf("%d",&n);
+	printf("\n");
+	printf("\n enter the elements: ");
+	for(i=0;i<n;i++)
+	{
+	 scanf("%d",&x[i]);
+	}
+	printf("\n Enter element you want to check:");
+	scanf("%d",&k);
+	for(j=0;j<n;j++)
+	{
+		if(x[j]==k)
+		{
+			printf("\nMember of set");
+		}
+		else
+		{
+			printf("\n Not A Member of Set");
+		}
+
+	}
+	getch();
+}
